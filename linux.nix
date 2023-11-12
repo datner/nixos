@@ -24,21 +24,21 @@
     ];
   };
 
-  home-manager = {
-    extraSpecialArgs = attrs;
-    useGlobalPkgs = true;
-    useUserPackages = true;
+  # home-manager = {
+  #   extraSpecialArgs = attrs;
+  #   useGlobalPkgs = true;
+  #   useUserPackages = true;
+  #
+  #   users.datner = {
+  #     imports = [./datner-home.nix];
+  #   };
+  # };
 
-    users.datner = {
-      imports = [./datner-home.nix];
-    };
-  };
-
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-    autoPrune.enable = true;
-  };
+  # virtualisation.docker = {
+  #   enable = true;
+  #   enableOnBoot = true;
+  #   autoPrune.enable = true;
+  # };
 
   nix = {
     settings = {
@@ -49,10 +49,10 @@
       auto-optimise-store = true;
     };
 
-    package = pkgs.nixVersions.stable;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
+    # package = pkgs.nixVersions.stable;
+    # extraOptions = ''
+    #   experimental-features = nix-command flakes
+    # '';
 
     gc = {
       automatic = true;
