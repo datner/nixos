@@ -4,6 +4,8 @@
   security.sudo.wheelNeedsPassword = false;
 
   programs.ssh.startAgent = true;
+  programs.gnupg.agent.enableSSHSupport = true;
+  
   programs.zsh.enable = true;
 
   environment.pathsToLink = ["/share/zsh"];
@@ -48,11 +50,6 @@
       ];
       auto-optimise-store = true;
     };
-
-    # package = pkgs.nixVersions.stable;
-    # extraOptions = ''
-    #   experimental-features = nix-command flakes
-    # '';
 
     gc = {
       automatic = true;

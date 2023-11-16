@@ -6,15 +6,9 @@
 
   disko.devices = import ./disk-config.nix;
 
-  boot.loader.grub = {
-    efiSupport = true;
-    efiInstallAsRemovable = true;
-  };
-
-  services.openssh = {
-    enable = true;
-  };
-
+  boot.loader.systemd-boot.enable = true;
+  services.openssh.enable = true;
+  
   users.users.root.openssh.authorizedKeys.keys = [
     (builtins.readFile ./nano-id_rsa.pub)
   ];
