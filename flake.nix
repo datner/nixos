@@ -45,7 +45,6 @@
       specialArgs = attrs;
       modules = [
         disko.nixosModules.disko
-        home-manager.nixosModules.home-manager
         ./hetzner.nix
         ./linux.nix
       ];
