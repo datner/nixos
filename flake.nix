@@ -44,7 +44,9 @@
       system = "x86_64-linux";
       specialArgs = attrs;
       modules = [
+        nix-index-database.nixosModules.nix-index
         disko.nixosModules.disko
+        home-manager.nixosModules.home-manager
         ./hetzner.nix
         ./linux.nix
       ];
