@@ -3,7 +3,6 @@
   nix-index-database,
   ...
 }: {
-  
   home.username = "datner";
   home.homeDirectory = "/home/datner";
   home.stateVersion = "23.11";
@@ -81,7 +80,6 @@
 
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
-
   };
 
   programs.starship = {

@@ -1,12 +1,17 @@
-{pkgs, nix-index-database, ...} @ attrs: {
-  system.stateVersion = "23.05";
+{
+  pkgs,
+  nix-index-database,
+  lib,
+  ...
+} @ attrs: {
+  system.stateVersion = "24.05";
 
   environment.pathsToLink = ["/share/zsh"];
   environment.shells = [pkgs.zsh];
   environment.enableAllTerminfo = true;
 
   programs.zsh.enable = true;
-  
+
   users.users.datner = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -38,6 +43,7 @@
   #   autoPrune.enable = true;
   # };
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   nix = {
     settings = {
       trusted-users = [

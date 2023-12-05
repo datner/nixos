@@ -6,12 +6,12 @@
       content = {
         type = "gpt";
         partitions = {
-          boot = {
+          BOOT = {
             size = "1M";
             type = "EF02"; # for grub MBR
           };
           ESP = {
-            size = "128M";
+            size = "500M";
             type = "EF00";
             content = {
               type = "mdraid";
@@ -39,7 +39,7 @@
             type = "EF02"; # for grub MBR
           };
           ESP = {
-            size = "128M";
+            size = "500M";
             type = "EF00";
             content = {
               type = "mdraid";
