@@ -2,14 +2,14 @@
   description = "NixOS Configurations";
 
   inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs/nixos-23.05;
+    nixpkgs.url = github:NixOS/nixpkgs/nixos-23.11;
     nixpkgs-unstable.url = github:NixOS/nixpkgs/nixos-unstable;
     disko = {
       url = github:nix-community/disko;
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = github:nix-community/home-manager/release-23.05;
+      url = github:nix-community/home-manager/release-23.11;
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-index-database = {
