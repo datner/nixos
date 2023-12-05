@@ -45,13 +45,15 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   nix = {
-    settings = {
-      trusted-users = [
-        "root"
-        "datner"
-      ];
-      auto-optimise-store = true;
-    };
+    settings.trusted-users = [
+      "root"
+      "datner"
+    ];
+    settings.auto-optimise-store = true;
+
+    extraOptions = "
+    experimental-features = nix-command flakes
+    ";
 
     gc = {
       automatic = true;
