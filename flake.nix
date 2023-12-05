@@ -12,10 +12,6 @@
       url = github:nix-community/home-manager/release-23.11;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-index-database = {
-      url = github:Mic92/nix-index-database;
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -24,7 +20,6 @@
     nixpkgs-unstable,
     disko,
     home-manager,
-    nix-index-database,
     ...
   } @ attrs: let
     packages = {pkgs, ...}: {
@@ -44,7 +39,6 @@
       system = "x86_64-linux";
       specialArgs = attrs;
       modules = [
-        nix-index-database.nixosModules.nix-index
         disko.nixosModules.disko
         home-manager.nixosModules.home-manager
         ./hetzner.nix

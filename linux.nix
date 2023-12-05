@@ -1,6 +1,5 @@
 {
   pkgs,
-  nix-index-database,
   lib,
   ...
 } @ attrs: {
@@ -27,21 +26,21 @@
     ];
   };
 
-  # home-manager = {
-  #   extraSpecialArgs = attrs;
-  #   useGlobalPkgs = true;
-  #   useUserPackages = true;
-  #
-  #   users.datner = {
-  #     imports = [./datner-home.nix];
-  #   };
-  # };
-  #
-  # virtualisation.docker = {
-  #   enable = true;
-  #   enableOnBoot = true;
-  #   autoPrune.enable = true;
-  # };
+  home-manager = {
+    extraSpecialArgs = attrs;
+    useGlobalPkgs = true;
+    useUserPackages = true;
+
+    users.datner = {
+      imports = [./datner-home.nix];
+    };
+  };
+
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+    autoPrune.enable = true;
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   nix = {

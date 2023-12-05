@@ -1,8 +1,4 @@
-{
-  pkgs,
-  nix-index-database,
-  ...
-}: {
+{pkgs, ...}: {
   home.username = "datner";
   home.homeDirectory = "/home/datner";
   home.stateVersion = "23.11";
@@ -77,9 +73,6 @@
       enable = true;
       settings.git_protocol = "ssh";
     };
-
-    # nix-index.enable = true;
-    # nix-index-database.comma.enable = true;
   };
 
   programs.starship = {
