@@ -40,7 +40,7 @@
 
   # Can either have this or the gnupg agent
   # programs.ssh.startAgent = true;
-  programs.mtr.enable = true;
+  # programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
