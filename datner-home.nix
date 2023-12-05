@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  nix-index-database,
+  ...
+}: {
   home.username = "datner";
   home.homeDirectory = "/home/datner";
   home.stateVersion = "23.11";
