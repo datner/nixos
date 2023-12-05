@@ -10,7 +10,12 @@
   ];
 
   disko.devices = import ./disk-config.nix;
-  boot.loader.systemd-boot.enable = true;
+  boot.loader = {
+    grub.enable = true;
+    grub.efiSupport = true;
+    grub.efiInstallAsRemovable = true;
+    grub.device = "/nodev/sda";
+  };
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "sd_mod"];
   boot.initrd.kernelModules = ["dm-snapshot"];
   boot.kernelModules = ["kvm-intel"];
