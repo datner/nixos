@@ -13,7 +13,6 @@
   boot.loader = {
     grub.enable = true;
     grub.efiSupport = true;
-    grub.efiInstallAsRemovable = true;
     grub.device = "nodev";
     efi.canTouchEfiVariables = true;
   };
