@@ -27,7 +27,6 @@
   };
 
   home-manager = {
-    extraSpecialArgs = attrs;
     useGlobalPkgs = true;
     useUserPackages = true;
 
