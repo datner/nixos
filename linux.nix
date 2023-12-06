@@ -31,14 +31,11 @@
     useUserPackages = true;
 
     users.datner = {
-      imports = [./datner-home.nix];
+      imports = [
+        ./datner-home.nix
+        ./hm/kube.nix
+      ];
     };
-  };
-
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-    autoPrune.enable = true;
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
