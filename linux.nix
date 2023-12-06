@@ -43,6 +43,7 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   nix = {
+    package = pkgs.nixFlakes;
     settings.trusted-users = [
       "root"
       "datner"
