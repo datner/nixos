@@ -26,16 +26,16 @@
     ];
   };
 
-  # home-manager = {
-  #   extraSpecialArgs = attrs;
-  #   useGlobalPkgs = true;
-  #   useUserPackages = true;
-  #
-  #   users.datner = {
-  #     imports = [./datner-home.nix];
-  #   };
-  # };
-  #
+  home-manager = {
+    extraSpecialArgs = attrs;
+    useGlobalPkgs = true;
+    useUserPackages = true;
+
+    users.datner = {
+      imports = [./datner-home.nix];
+    };
+  };
+
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
