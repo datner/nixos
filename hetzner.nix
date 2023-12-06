@@ -13,8 +13,7 @@
   boot.loader = {
     grub.enable = true;
     grub.efiSupport = true;
-    grub.device = "nodev";
-    efi.canTouchEfiVariables = true;
+    grub.devices = ["/dev/sda" "/dev/sdb"];
   };
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "sd_mod"];
   boot.initrd.kernelModules = ["dm-snapshot"];
