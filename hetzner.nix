@@ -14,7 +14,7 @@
     grub.enable = true;
     grub.efiSupport = true;
     grub.efiInstallAsRemovable = true;
-    grub.device = "/nodev/sda";
+    grub.device = "nodev";
     efi.canTouchEfiVariables = true;
   };
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "sd_mod"];
