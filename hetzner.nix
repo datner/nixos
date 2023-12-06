@@ -19,6 +19,7 @@
   boot.initrd.kernelModules = ["dm-snapshot"];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
+  boot.swraid.mdadmConf = "MAILADDR root@mydomain.tld"; # doesn't matter
 
   networking.useDHCP = lib.mkDefault true;
   networking.hostName = "devbox";
