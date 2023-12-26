@@ -11,8 +11,6 @@
 
   programs.zsh.enable = true;
 
-  services.tailscale.enable = true;
-
   users.users.datner = {
     isNormalUser = true;
     shell = pkgs.zsh;

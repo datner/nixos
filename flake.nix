@@ -43,6 +43,7 @@
         home-manager.nixosModules.home-manager
         ./hetzner.nix
         ./linux.nix
+        ./tailscale.nix
       ];
     };
   };
