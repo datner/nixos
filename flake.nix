@@ -44,6 +44,7 @@
         ./hetzner.nix
         ./linux.nix
         ./tailscale.nix
+        ./rancher.nix
       ];
     };
   };
