@@ -22,6 +22,7 @@
   boot.swraid.mdadmConf = "MAILADDR root@mydomain.tld"; # doesn't matter
 
   networking.useDHCP = lib.mkDefault true;
+  networking.hostName = "devbox";
   networking.networkmanager.enable = true;
 
   security.pam.enableSSHAgentAuth = true;
