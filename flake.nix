@@ -45,7 +45,7 @@
         ./linux.nix
         ./tailscale.nix
         # ./rancher.nix
-        # ./caprover.nix
+        ./caprover.nix
       ];
     };
   };
