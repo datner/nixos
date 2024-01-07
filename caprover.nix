@@ -1,12 +1,13 @@
-{config, pkgs, ...}: {
+{pkgs, ...}: {
   networking.firewall.allowedTCPPorts = [
     3000
   ];
   
-  virtualisation.docker.enable = true;
   users.users.datner.extraGroups = [ "docker" ];
-  config.virtualisation.oci-containers.backend = "docker";
-  config.virtualisation.oci-containers.containers.caprover = {
+  
+  virtualisation.docker.enable = true;
+  virtualisation.oci-containers.backend = "docker";
+  virtualisation.oci-containers.containers.caprover = {
     image = "caprover/caprover";
     ports = [
       "127.0.0.1:80:80"
