@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   networking.firewall.allowedTCPPorts = [
     3000
+    80
+    443
   ];
   
   users.users.datner.extraGroups = [ "docker" ];
