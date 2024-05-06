@@ -9,6 +9,7 @@
   ];
 
   home.packages = with pkgs; [
+    openssl
     ripgrep
     fd
     jq
