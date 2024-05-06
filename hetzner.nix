@@ -38,6 +38,8 @@
     settings.PermitRootLogin = "yes";
   };
 
+  services.yubikey-agent.enable = true;
+
   # Can either have this or the gnupg agent
   # programs.ssh.startAgent = true;
   # programs.mtr.enable = true;
