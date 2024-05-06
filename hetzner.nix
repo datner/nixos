@@ -33,9 +33,12 @@
   services.openssh = {
     enable = true;
     banner = "Welcome to Datners Devbox";
-    settings.PasswordAuthentication = false;
-    settings.KbdInteractiveAuthentication = false;
-    settings.PermitRootLogin = "yes";
+    settings = {
+      KbdInteractiveAuthentication = false;
+      PasswordAuthentication = false;
+      StreamLocalBindUnlink = "yes";
+      PermitRootLogin = "yes";
+    };
   };
 
   # Can either have this or the gnupg agent
