@@ -44,10 +44,10 @@
   # Can either have this or the gnupg agent
   # programs.ssh.startAgent = true;
   # programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   users.users.root.openssh.authorizedKeys.keyFiles = [
     ./nano-id_rsa.pub
