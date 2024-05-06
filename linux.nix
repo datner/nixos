@@ -9,6 +9,8 @@
   environment.shells = [pkgs.zsh];
   environment.enableAllTerminfo = true;
 
+  environment.systemPackages = [pkgs.openssl];
+
   programs.zsh.enable = true;
 
   users.users.datner = {
