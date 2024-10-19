@@ -13,9 +13,11 @@
     pkgs.openssl
     pkgs.wget
     pkgs.curl
+    pkgs.jq
   ];
 
   programs.zsh.enable = true;
+  programs.git.enable = true;
 
   users.users.datner = {
     isNormalUser = true;
