@@ -9,7 +9,11 @@
   environment.shells = [pkgs.zsh];
   environment.enableAllTerminfo = true;
 
-  environment.systemPackages = [pkgs.openssl];
+  environment.systemPackages = [
+    pkgs.openssl
+    pkgs.wget
+    pkgs.curl
+  ];
 
   programs.zsh.enable = true;
 
@@ -36,11 +40,6 @@
       datner = {
         imports = [
           ./datner-home.nix
-        ];
-      };
-      root = {
-        imports = [
-          ./root-home.nix
         ];
       };
     };
