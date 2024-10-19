@@ -32,11 +32,17 @@
     useGlobalPkgs = true;
     useUserPackages = true;
 
-    users.datner = {
-      imports = [
-        ./datner-home.nix
-        ./hm/kube.nix
-      ];
+    users = {
+      datner = {
+        imports = [
+          ./datner-home.nix
+        ];
+      };
+      root = {
+        imports = [
+          ./root-home.nix
+        ];
+      };
     };
   };
 
