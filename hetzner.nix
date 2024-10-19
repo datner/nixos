@@ -24,6 +24,7 @@
   networking.useDHCP = lib.mkDefault true;
   networking.hostName = "devbox";
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 80 443 8080 ];
 
   security.pam.enableSSHAgentAuth = true;
   security.sudo.wheelNeedsPassword = false;
